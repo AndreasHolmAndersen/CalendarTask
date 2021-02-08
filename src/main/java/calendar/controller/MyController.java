@@ -13,9 +13,8 @@ public class MyController {
     @GetMapping("/calc")
     @ResponseBody
     public String dateDiff(@RequestParam int Year, int Month, int DayOfMonth){
-        DateDiff dateDiff = new DateDiff();
-        String result = dateDiff.calcDiff(Year, Month, DayOfMonth);
-
-        return result;
+        DateDiff dateDiff = new DateDiff(); //New object
+        String result = dateDiff.calcDiff(Year, Month, DayOfMonth); //Find difference
+        return result; //return to body
     }
 }
